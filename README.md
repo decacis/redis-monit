@@ -7,6 +7,26 @@ A simple redis monitor written in Node.js. It comes with a web dashboard with HT
 This project has many purposes, but the main one was that I needed a redis monitor that was simple and I couldn't find one that I liked and was suited for my enviroment.
 You can use redis-monit in two ways: if you are already using Node.js or if you are not. The former should be the most common one.
 ***
+## What does it monitor?
+Basic but useful information extracted from the *info* command. The list of commands allongs with an explanation of what they mean can be found [here.](https://www.datadoghq.com/blog/how-to-monitor-redis-performance-metrics/)
+*TL;DR:*
+* latency
+* instantaneous_ops_per_sec
+* hit rate (calculated)
+* used_memory
+* mem_fragmentation_ratio
+* evicted_keys
+* blocked_clients
+* connected_clients
+* connected_slaves
+* master_last_io_seconds_ago (if available)
+* keyspace
+* rdb_last_save_time
+* rdb_changes_since_last_save
+* rejected_connections
+* keyspace_misses
+* master_link_down_since_seconds (if available)
+***
 ## Zoom
 In the charts, you can zoom in by dragging. To reset the zoom, double click the chart.
 ***
