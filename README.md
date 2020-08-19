@@ -7,6 +7,9 @@ A simple redis monitor written in Node.js. It comes with a web dashboard with HT
 This project has many purposes, but the main one was that I needed a redis monitor that was simple and I couldn't find one that I liked and was suited for my enviroment.
 You can use redis-monit in two ways: if you are already using Node.js or if you are not. The former should be the most common one.
 ***
+## Zoom
+In the charts, you can zoom in by dragging. To reset the zoom, double click the chart.
+***
 ## Install
 As I mentioned before, there are two ways to do this:
 ### I'm already using Node.js
