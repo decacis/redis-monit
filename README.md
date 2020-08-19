@@ -94,7 +94,7 @@ If using TLS encryption:
 More information about this can be found [here.](https://github.com/luin/ioredis/blob/master/API.md#new_Redis_new)
 ***
 ## Authentication
-redis-monit uses HTTP basic authentication to secure the web interface. Also, the password hashes are hashed using the [bcrypt password-hashing function](https://en.wikipedia.org/wiki/Bcrypt)
+redis-monit uses HTTP basic authentication to secure the web interface. Also, the password are hashed using the [bcrypt password-hashing function](https://en.wikipedia.org/wiki/Bcrypt)
 
 The default user and password are:
 ```javascript
