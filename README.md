@@ -61,11 +61,11 @@ In your development computer:
 ## Settings
 redis-monit can be configured with various settings:
 #### statsLogPath : String (default: "")
-If specified, redis-monit will save logs to this path. It must be a absolute path. Leave it blank and redis-monit will save logs to the tmp path.
+If specified, redis-monit will save logs to this file. It must be a absolute path and a json file, for example "/www/mywebsite/logs.json". Leave it blank and redis-monit will save logs to a file located in the tmp path.
 #### enableAnimations : Boolean (default: true)
-Weather the web interface of redis-monit will show animations or not. No animations improve performance on the client side, there's no effect on the server load.
+Weather the web interface of redis-monit will show animations or not. No animations improve performance on the client side (browser), but there's no effect on the server performance.
 #### autostart : Boolean (default: true)
-Weather the log colletion will start automatically when the server starts. If disabled, you must manually start collecting logs on the web interface.
+Weather the log colletion will start automatically when the server starts. If disabled, you must manually start collecting logs by pressing "Restart stats (will reset them)" on the web interface.
 #### deleteLogsOnStart : Boolean (default: true)
 Weather the previous logs will be deleted when the service starts. Useful to automatically delete previous data if the server restarts.
 #### pollTimeSeconds : Integer (default: 10)
@@ -95,7 +95,7 @@ If using TLS encryption:
 More information about this can be found [here.](https://github.com/luin/ioredis/blob/master/API.md#new_Redis_new)
 ***
 ## Authentication
-redis-monit uses HTTP basic authentication to secure the web interface. Also, the password are hashed using the [bcrypt password-hashing function](https://en.wikipedia.org/wiki/Bcrypt)
+redis-monit uses HTTP basic authentication to secure the web interface. Also, the passwords are hashed using the [bcrypt password-hashing function.](https://en.wikipedia.org/wiki/Bcrypt)
 
 The default user and password are:
 ```javascript
