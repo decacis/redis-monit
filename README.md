@@ -43,6 +43,7 @@ If you're using Node.js already the you must:
 6. Add redis-monit to the pm2 list: pm2 start index.js (you shouldn't do step 4 if you do this)
 7. Generate a startup script: pm2 startup
 8. Freeze your process list across server restart: pm2 save
+
 For more information about pm2 please refer to [their repository.](https://github.com/Unitech/pm2)
 ### I'm NOT using Node.js
 If you preffer not to use Node.js **in your redis server** then you should:
@@ -54,7 +55,7 @@ In your development computer:
 5. Adjust your project's [settings](#settings)
 6. Install the [pkg](https://www.npmjs.com/package/pkg) package globally running: npm install -g pkg
 7. In the project's root directory run: pkg -c package.json index.js --options max_old_space_size=40 --out-path ./dist
-> This will create linux, macos and windows binaries. The architecture depends on the computer's architecture where you run the command. The "--options max_old_space_size=40" means that the maximum memory that the binary can use is 40 Mb. "--out-path ./dist" is the directory where the binaries are placed. You can read more about this configuration on the [pkg's repository](https://github.com/vercel/pkg)
+> This will create linux, macos and windows binaries. The architecture depends on the computer's architecture where you run the command. The "--options max_old_space_size=40" means that the maximum memory that the binary can use is 40 Mb. "--out-path ./dist" is the directory where the binaries are placed. You can read more about this configuration on the [pkg's repository.](https://github.com/vercel/pkg)
 8. That's it! To deploy redis-monit you should include: the binary file and the settings.json file that you are going to use. They must be in the same folder.
 ***
 ## Settings
