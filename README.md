@@ -1,5 +1,5 @@
 # redis-monit
-A simple redis monitor written in Node.js. It comes with a web dashboard with HTTP basic authentication and the information is extracted from the *info* command on redis.
+A simple redis monitor written in Javascript (Node.js.) It comes with a web interface with HTTP basic authentication and the information is extracted from the *info* command of redis.
 
 ![redis-monit](https://s7.gifyu.com/images/bENWDy6jy1.gif "redis-monit showcase")
 ***
