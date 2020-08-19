@@ -18,7 +18,7 @@ If you're using Node.js already the you must:
 2. Run: npm install
 3. Adjust your project's [settings](#settings)
 4. Run either: npm start OR node index.js
-Optionally, you may enable redis-monit to run on startup (in case your server restarts or something like that):
+> Optionally, you may enable redis-monit to run on startup (in case your server restarts or something like that):
 5. Install [pm2](https://github.com/Unitech/pm2) globally: npm install pm2 -g
 6. Add redis-monit to the pm2 list: pm2 start index.js (you shouldn't do step 4 if you do this)
 7. Generate a startup script: pm2 startup
