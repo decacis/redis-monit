@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#navbar{
+    padding: .5em;
+    position: sticky;
+    background-color: whitesmoke;
+    top: 0;
+    display: flex;
+}
+#navbar > ul{
+    display: flex;
+    list-style-type: none;
+}
+#navbar > ul > li{
+    color: black;
+    margin-right: 1em;
+}
+
+#controls{
+    margin-left: auto;
+    order: 2;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: dimgrey;
+}
+
+.section{
+    padding: 2.5vw;
+    display: flex;
+    flex-direction: column;
+}
+.section > div.sectionTitle{
+    width: 100%;
+}
+.section > div.sectionTitle > h1{
+    margin: 0;
+}
+
+.section > div.charts{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section > div.charts > div.chart{
+    flex: 0 47.5%;
+    margin-bottom: 2.5vw;
+    /* width: 47.5%; */
+}
+.section > div.charts > div.field{
+    flex: 0 15%;
+    /* width: 47.5%; */
+}
+.section > div.charts > div.chart:nth-child(even){
+    margin-left: 2.5vw;
+}
+
+#draggableInfoInstanceContainer{
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffff;
+    border: 1px solid #7f8fa6;
+    display: none;
+    width: 14em;
+}
+#draggableInfoInstanceContainerHeader{
+    background-color: #e8e9ee;
+    padding: .5em;
+    cursor: grab;
+}
+#draggableInfoInstanceContainer > table{
+    padding: .5em;
+    width: 100%;
+}
+#draggableInfoInstanceContainer > table tr:nth-child(even){
+    background-color: #efeff3;
+}
+#draggableInfoInstanceContainer > table tr td:last-child{
+    text-align: right;
+}
+
+#draggableInfoInstanceClose{
+    float: right;
+    cursor: pointer;
+    padding: .5em .3em;
+    line-height: .2;
+}
+#instanceInfoBtn{
+    color: #353b48;
+    padding: .2em;
+}

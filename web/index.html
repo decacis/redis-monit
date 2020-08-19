@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./own_lib/index.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#basic">Basic</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#memory">Memory</a></li>
+            <li><a href="#persistence">Persistence</a></li>
+            <li><a href="#error">Errors</a></li>
+            <li><a href="#!" id="instanceInfoBtn">Show instance information</a></li>
+        </ul>
+        <ul id="controls">
+            <li><a href="#!" id="stopStats">Stop stats</a></li>
+            <li><a href="#!" id="startStats">Retart stats (will reset them)</a></li>
+        </ul>
+    </nav>
+
+    <!-- DRAGGABLE INFO INSTANCE -->
+    <div id="draggableInfoInstanceContainer">
+        <div id="draggableInfoInstanceContainerHeader"><span id="redis_id"></span><span id="draggableInfoInstanceClose" title="close">X</span></div>
+        <table>
+            <tr>
+                <td>Redis version:</td>
+                <td id="redis_version"></td>
+            </tr>
+            <tr>
+                <td>Process id:</td>
+                <td id="process_id"></td>
+            </tr>
+            <tr>
+                <td>Uptime in seconds:</td>
+                <td id="uptime_in_seconds"></td>
+            </tr>
+            <tr>
+                <td>Uptime in days:</td>
+                <td id="uptime_in_days"></td>
+            </tr>
+            <tr>
+                <td>GCC version:</td>
+                <td id="gcc_version"></td>
+            </tr>
+            <tr>
+                <td>Role:</td>
+                <td id="role"></td>
+            </tr>
+            <tr>
+                <td>Connected slaves:</td>
+                <td id="connected_slaves"></td>
+            </tr>
+            <tr>
+                <td>AOF enabled:</td>
+                <td id="aof_enabled"></td>
+            </tr>
+            <tr>
+                <td>Max memory:</td>
+                <td id="maxmemory_human"></td>
+            </tr>
+            <tr>
+                <td>Max memory policy:</td>
+                <td id="maxmemory_policy"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- BASIC -->
+    <div class="section" id="basic">
+        <div class="sectionTitle">
+            <h1>Basic</h1>
+        </div>
+        <div class="charts" id="basicCharts">
+            <div class="chart">
+                <canvas id="connectedClients"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="connectedSlaves"></canvas>
+            </div>
+        </div>
+        <div class="charts" id="basicCharts">
+            <div class="field">
+                <h2 id="masterLastIoSecondsAgoTitle"></h2>
+                <h3 id="masterLastIoSecondsAgo"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERFORMANCE -->
+    <div class="section" id="performance">
+        <div class="sectionTitle">
+            <h1>Performance</h1>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <canvas id="latency"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="instantaneousOpsPerSec"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="hitRate"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMORY -->
+    <div class="section" id="memory">
+        <div class="sectionTitle">
+            <h1>Memory</h1>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <canvas id="usedMemory"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="memFragmentationRatio"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="evictedKeys"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="blockedClients"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERSISTENCE -->
+    <div class="section" id="persistence">
+        <div class="sectionTitle">
+            <h1>Persistence</h1>
+        </div>
+        <div class="charts">
+            <div class="field">
+                <h2>RDB last save:</h2>
+                <h3 id="lastSaveTime"></h3>
+            </div>
+            <div class="chart">
+                <canvas id="rdbChangesSinceLastSave"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- ERROR -->
+    <div class="section" id="error">
+        <div class="sectionTitle">
+            <h1>Error</h1>
+        </div>
+        <div class="charts">
+            <div class="chart">
+                <canvas id="rejectedConnections"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="keyspaceMisses"></canvas>
+            </div>
+            <div class="field">
+                <h2 id="masterLinkDownSinceSecondsTitle"></h2>
+                <h3 id="masterLinkDownSinceSeconds"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/Chart.bundle.min.js"></script>
+    <script src="./lib/hammerjs.2.0.8.js"></script>
+    <script src="./lib/chartjs-plugin-zoom.0.7.7.js"></script>
+    <script src="./own_lib/index.js"></script>
+    <script src="./own_lib/resetZoom.js"></script>
+</body>
+</html>

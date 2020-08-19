@@ -1,0 +1,33 @@
+{
+  "name": "redis-monit",
+  "version": "0.0.1",
+  "description": "A simple redis monitor",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "pkg": {
+    "assets": [
+      "web/index.html",
+      "web/own_lib/*.css",
+      "web/lib/*.js",
+      "web/own_lib/*.js"
+    ]
+  },
+  "keywords": [
+    "redis",
+    "monitor",
+    "stats"
+  ],
+  "repository": "https://github.com/decacis/redis-monit",
+  "author": "Daniel Castellanos",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-timeout": "^1.9.0",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "helmet": "^4.1.0",
+    "ioredis": "^4.17.3"
+  }
+}

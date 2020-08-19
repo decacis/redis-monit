@@ -1,0 +1,19 @@
+{
+    "statsLogPath": "",
+    "enableAnimations": true,
+    "autostart": true,
+    "deleteLogsOnStart": true,
+    "pollTimeSeconds": 10,
+    "logsToKeep": 90,
+    "credentials": {
+        "rmadmin": "$2a$10$EmwyaBbK7nG9TNM1W5flbOMs1Ee8e5fw4TnFdAR8jr0lKdH3OhfQa"
+    },
+    "port": 3141,
+    "redisConnection": {
+        "port": 6379,
+        "host": "127.0.0.1",
+        "family": 4,
+        "password": "12345",
+        "db": 0
+    }
+}
