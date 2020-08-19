@@ -857,8 +857,7 @@ function renderGraphs(dt){
     }
 }
 
-function updateCharts(dt){
-    console.log('updated');
+function updateCharts(dt)
 
     // Instance info
     document.getElementById('redis_id').innerText = dt.instance.id[0].y;
@@ -898,7 +897,6 @@ function updateCharts(dt){
         basicCharts.removeChild(basicCharts.lastChild);
     }
     if(dt.basic.keyspace && Object.keys(dt.basic.keyspace).length > 0){
-        console.log(dt.basic.keyspace)
         Object.keys(dt.basic.keyspace).forEach(key => {
             // key = db0
             let tempChartContainer = document.createElement('div');
