@@ -1,7 +1,7 @@
 # redis-monit
-A simple redis monitor written in Javascript (Node.js.) It comes with a web interface with HTTP basic authentication and the information is extracted from the *info* command of redis.
+A simple redis monitor written in Javascript (Node.js.) It comes with a web interface with HTTP basic authentication and the data is extracted from the *info* command of redis.
 
-![redis-monit](https://s7.gifyu.com/images/bENWDy6jy1.gif "redis-monit showcase")
+![redis-monit](https://s7.gifyu.com/images/bENWDy6jy1.gif "redis-monit")
 ***
 ## Why?
 This project has many purposes, but the main one was that I needed a redis monitor that was simple and I couldn't find one that I liked and was suited for my enviroment.
@@ -35,7 +35,7 @@ As I mentioned before, there are two ways to do this:
 ### I'm already using Node.js
 If you're using Node.js already then you must:
 1. Clone this repository: git clone https://github.com/decacis/redis-monit.git
-2. Run: npm install
+2. Run in the project's root directory: npm install
 3. Adjust your project's [settings.](#settings)
 4. Run either: npm start OR node index.js
 > Optionally, you may enable redis-monit to run on startup (in case your server restarts or something like that):
@@ -46,12 +46,12 @@ If you're using Node.js already then you must:
 
 For more information about pm2 please refer to [their repository.](https://github.com/Unitech/pm2)
 ### I'm NOT using Node.js
-If you preffer not to use Node.js **in your redis server** then you should:
+If you preffer not to use Node.js **in your redis server** then you should,
 In your development computer:
 1. Download and install [Node.js](https://nodejs.org/en/) (LTS version should be fine, also npm comes included)
 2. Verify your installation running the following command on the command line: node -v AND npm -v (they should output your Node.js and NPM version)
 3. Clone this repository (git clone https://github.com/decacis/redis-monit.git)
-4. Run: npm install
+4. Run in the project's root directory: npm install
 5. Adjust your project's [settings](#settings)
 6. Install the [pkg](https://www.npmjs.com/package/pkg) package globally running: npm install -g pkg
 7. In the project's root directory run: pkg -c package.json index.js --options max_old_space_size=40 --out-path ./dist
